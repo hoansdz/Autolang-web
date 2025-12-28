@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autolang Website</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    window.appendOutput = () => {}
+    window.Module = {
+      print: (text) => window.appendOutput(text),           // Bắt std::cout
+      printErr: (text) => window.appendOutput(text),        // Bắt std::cerr (nơi xuất lỗi)
+
+      // Hàm được gọi khi runtime WASM đã được tải và sẵn sàng
+      onRuntimeInitialized: function () {
+        window.runCompilerWasm = Module.cwrap('runCompiler', null, ['string']);
+      },
+      onerror: (e) => {
+        console.log(e)
+      },
+      // Thiết lập đường dẫn cơ sở cho các file tải xuống
+      locateFile: function (path, prefix) {
+        // Tùy chỉnh đường dẫn nếu cần, ở đây là /build/wasm/
+        return 'wasm/main.wasm'
+      }
+    }
+  </script>
+  <script src="/wasm/main.js"></script>
+  <script type="module" src="/src/main.jsx"></script>
+
+</body>
+
+</html>

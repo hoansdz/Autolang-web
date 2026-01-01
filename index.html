@@ -6,14 +6,22 @@
   <link rel="icon" type="image/svg+xml" href="/Autolang-web/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Autolang Website</title>
-  <script type="module" crossorigin src="/Autolang-web/assets/index-B3vmC4br.js"></script>
-  <link rel="stylesheet" crossorigin href="/Autolang-web/assets/index-5JCZKpIi.css">
+  <script type="module" crossorigin src="/Autolang-web/assets/index-CS4BVTGx.js"></script>
+  <link rel="stylesheet" crossorigin href="/Autolang-web/assets/index-pVBudeAG.css">
 </head>
 
 <body>
   <div id="root"></div>
   <script>
-    window.appendOutput = () => {}
+    window.appendOutput = () => { }
+    window.onerror = function (msg, src, line, col, err) {
+      console.error("JS ERROR:", msg, err);
+    };
+
+    window.addEventListener("unhandledrejection", e => {
+      console.error("PROMISE ERROR:", e.reason);
+    });
+
     window.Module = {
       print: (text) => window.appendOutput(text),           // Bắt std::cout
       printErr: (text) => window.appendOutput(text),        // Bắt std::cerr (nơi xuất lỗi)

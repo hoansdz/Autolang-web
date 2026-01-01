@@ -12,9 +12,9 @@ function Content({ }) {
                 <SideBar />
                 <Routes>
                     <Route path='/' element={<Home />} />
-                    <Route path='/editor' element={<Editor />} />
-                    <Route path='/docs' element={<Docs />} />
-                    <Route path='/docs/introduction' element={<Introduce />} />
+                    <Route path='Autolang-web/editor' element={<Editor />} />
+                    <Route path='Autolang-web/docs' element={<Docs />} />
+                    <Route path='Autolang-web/docs/introduction' element={<Introduce />} />
                 </Routes>
             </section>
         </BrowserRouter>

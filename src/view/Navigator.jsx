@@ -10,7 +10,7 @@ function Navigator({ }) {
         <header className="px-4 lg:px-8 py-2 lg:py-4 border-b border-gray-300/80 flex flex-row justify-between">
             <div className="flex items-center gap-2">
                 <p className="md:hidden cursor-pointer text-2xl">☰</p>
-                <img className="w-12 h-12 lg:w-16 lg:h-16" src="/images/autolang.png"></img>
+                <img className="w-12 h-12 lg:w-16 lg:h-16" src="public/images/autolang.png"></img>
                 <p className="text-xl lg:text-2xl font-bold">Autolang</p>
             </div>
             <div className="flex items-center gap-2">

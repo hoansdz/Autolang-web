@@ -11,7 +11,15 @@
 <body>
   <div id="root"></div>
   <script>
-    window.appendOutput = () => {}
+    window.appendOutput = () => { }
+    window.onerror = function (msg, src, line, col, err) {
+      console.error("JS ERROR:", msg, err);
+    };
+
+    window.addEventListener("unhandledrejection", e => {
+      console.error("PROMISE ERROR:", e.reason);
+    });
+
     window.Module = {
       print: (text) => window.appendOutput(text),           // Bắt std::cout
       printErr: (text) => window.appendOutput(text),        // Bắt std::cerr (nơi xuất lỗi)

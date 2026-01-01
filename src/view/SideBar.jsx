@@ -6,9 +6,9 @@ function SideBar({ }) {
     return (
         <nav className='border-r border-gray-300/80 py-4' >
             <div className='flex-col gap-4 md:flex hidden'>
-                <NavLink to='/' className={({ isActive }) => `px-4 lg:px-8 py-2 lg:py-4 text-xl font-semibold text-gray-400 cursor-pointer hover:text-black ${isActive ? '!text-black' : ''}`}>{currentLang['home']}</NavLink>
-                <NavLink to='/editor' className={({ isActive }) => `px-4 lg:px-8 py-2 lg:py-4 text-xl font-semibold text-gray-400 cursor-pointer hover:text-black ${isActive ? '!text-black' : ''}`}>{currentLang['editor']}</NavLink>
-                <NavLink to='/docs' className={({ isActive }) => `px-4 lg:px-8 py-2 lg:py-4 text-xl font-semibold text-gray-400 cursor-pointer hover:text-black ${isActive ? '!text-black' : ''}`}>{currentLang['docs']}</NavLink>
+                <NavLink to='Autolang-web/' className={({ isActive }) => `px-4 lg:px-8 py-2 lg:py-4 text-xl font-semibold text-gray-400 cursor-pointer hover:text-black ${isActive ? '!text-black' : ''}`}>{currentLang['home']}</NavLink>
+                <NavLink to='Autolang-web/editor' className={({ isActive }) => `px-4 lg:px-8 py-2 lg:py-4 text-xl font-semibold text-gray-400 cursor-pointer hover:text-black ${isActive ? '!text-black' : ''}`}>{currentLang['editor']}</NavLink>
+                <NavLink to='Autolang-web/docs' className={({ isActive }) => `px-4 lg:px-8 py-2 lg:py-4 text-xl font-semibold text-gray-400 cursor-pointer hover:text-black ${isActive ? '!text-black' : ''}`}>{currentLang['docs']}</NavLink>
                 <div className='flex flex-col
                     [&>*]:px-6 [&>*]:lg:px-10 [&>*]:py-2 [&>*]:text-lg [&>*]:font-medium [&>*]:text-gray-400 [&>*]:cursor-pointer [&>*]:hover:text-black
                 '>

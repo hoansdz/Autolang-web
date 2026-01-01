@@ -22,6 +22,7 @@ function RunCompiler(code: string): void {
         window.appendOutput("--- KẾT THÚC THÀNH CÔNG ---\n");
     } catch (e) {
         window.appendOutput(`--- LỖI UNEXPECTED: ${e} ---\n`);
+        console.log(e)
     }
 }
 

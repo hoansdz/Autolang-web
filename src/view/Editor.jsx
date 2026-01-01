@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import 'codemirror/lib/codemirror.css';
-import 'codemirror/theme/dracula.css';
-import 'codemirror/theme/monokai.css';
+// import 'codemirror/theme/dracula.css';
+// import 'codemirror/theme/monokai.css';
 import 'codemirror/mode/xml/xml';
 import { UnControlled as CodeMirror } from 'react-codemirror2'
 import lang from '../resources/strings'
@@ -44,6 +44,7 @@ function Editor({ }) {
                         }}
                         editorDidMount={(editor) => {
                             editor.setSize('100%', '100%');
+                            editor.getWrapperElement().style.background = '#eeeeee';
                         }}
                     />
                 </div>

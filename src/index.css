@@ -6,14 +6,21 @@
     font-family: 'Poppins', sans-serif;
   }
 }
-
+.a {color:#dcd3d3}
 .cm-keyword { color: #0066b5 !important; }
+.cm-skeyword { color: #ad9917 !important; }
 .cm-declaration { color: #a200ff !important; }
 .cm-ntype { color: #2bb900 !important; }
 .cm-loop { color: #d1479c !important; }
 .cm-atom { color: #0084a1 !important; }
 .cm-number { color: #00bbff !important; }
-.cm-string { color: #a27100 !important; }
+.cm-string { color: #d39c1d !important; }
+.cm-nullable { color: #cf1b1b !important; }
+.cm-classes { color: #24a1fb !important; }
 .cm-comment { color: #00d59d !important; font-style: italic; }
 .cm-operator { color: #ff5555 !important; }
-.cm-variable { color: #30c7c2 !important; }
+.cm-variable { color: #2fb1ad !important; }
+.cm-normal { color: #000000 !important; }
+/* .CodeMirror-cursor {
+  border-left: 2px solid #aeafad !important;
+} */
